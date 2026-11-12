@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+venv/
+.venv/
+mapreduce/results/
+kafka/data/
+kafka/metadata/
+hdfs/namenode/journal.log
