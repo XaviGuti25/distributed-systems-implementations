@@ -1,6 +1,8 @@
-# Distributed Systems from Scratch
+# Distributed Systems Implementations
 
-Simplified versions of **HDFS**, **MapReduce** and **Kafka** built from scratch in Python as Docker microservices, plus data-processing jobs with **Apache Spark RDDs**.
+Simplified versions of **HDFS**, **MapReduce** and **Kafka** as Docker microservices in Python, plus data-processing jobs with **Apache Spark RDDs**.
+
+The course teaching team provided a starter skeleton for each system (project structure, Docker setup and API stubs); we implemented the core logic on top of it.
 
 Team project for the *Large-Scale Distributed Systems* course at Universitat Pompeu Fabra (2026).
 
