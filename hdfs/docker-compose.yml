@@ -1,0 +1,21 @@
+services:
+  namenode:
+    build: ./namenode
+    ports:
+      - "8000:80"
+  datanode1:
+    build: ./datanode
+    ports:
+      - "8001:80"
+
+  datanode2:
+    build: ./datanode
+    ports:
+      - "8002:80"
+
+  datanode3:
+    build: ./datanode
+    ports:
+      - "8003:80"
+
+

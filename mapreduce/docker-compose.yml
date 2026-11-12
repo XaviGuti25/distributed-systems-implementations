@@ -1,0 +1,55 @@
+
+version: '3'
+services:
+  master:
+    build: ./master
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./apps:/app/apps
+      - ./results:/app/results
+  worker1:
+    build: ./worker
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./data:/app/data
+      - ./apps:/app/apps
+      - ./results:/app/results
+
+  worker2:
+    build: ./worker
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./data:/app/data
+      - ./apps:/app/apps
+      - ./results:/app/results
+
+  worker3:
+    build: ./worker
+    ports:
+      - "8003:8000"
+    volumes:
+      - ./data:/app/data
+      - ./apps:/app/apps
+      - ./results:/app/results
+
+  worker4:
+    build: ./worker
+    ports:
+      - "8004:8000"
+    volumes:
+      - ./data:/app/data
+      - ./apps:/app/apps
+      - ./results:/app/results
+
+  worker5:
+    build: ./worker
+    ports:
+      - "8005:8000"
+    volumes:
+      - ./data:/app/data
+      - ./apps:/app/apps
+      - ./results:/app/results

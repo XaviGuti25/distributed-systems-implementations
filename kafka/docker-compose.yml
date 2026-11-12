@@ -1,0 +1,80 @@
+services:
+  broker-1:
+    build: .
+    container_name: broker-1
+    environment:
+      BROKER_ID: "1"
+      LEADER_BROKER_ID: "1"
+      ALL_BROKER_IDS: "1,2,3,4,5"
+      METADATA_DIR: "/metadata"
+      DATA_DIR: "/data"
+      BROKERS: "1@broker-1:80,2@broker-2:80,3@broker-3:80,4@broker-4:80,5@broker-5:80"
+    ports:
+      - "8001:80"
+    volumes:
+      - ./metadata/broker-1:/metadata
+      - ./data/broker-1:/data
+
+  broker-2:
+    build: .
+    container_name: broker-2
+    environment:
+      BROKER_ID: "2"
+      LEADER_BROKER_ID: "1"
+      ALL_BROKER_IDS: "1,2,3,4,5"
+      METADATA_DIR: "/metadata"
+      DATA_DIR: "/data"
+      BROKERS: "1@broker-1:80,2@broker-2:80,3@broker-3:80,4@broker-4:80,5@broker-5:80"
+    ports:
+      - "8002:80"
+    volumes:
+      - ./metadata/broker-2:/metadata
+      - ./data/broker-2:/data
+
+  broker-3:
+    build: .
+    container_name: broker-3
+    environment:
+      BROKER_ID: "3"
+      LEADER_BROKER_ID: "1"
+      ALL_BROKER_IDS: "1,2,3,4,5"
+      METADATA_DIR: "/metadata"
+      DATA_DIR: "/data"
+      BROKERS: "1@broker-1:80,2@broker-2:80,3@broker-3:80,4@broker-4:80,5@broker-5:80"
+    ports:
+      - "8003:80"
+    volumes:
+      - ./metadata/broker-3:/metadata
+      - ./data/broker-3:/data
+
+  broker-4:
+    build: .
+    container_name: broker-4
+    environment:
+      BROKER_ID: "4"
+      LEADER_BROKER_ID: "1"
+      ALL_BROKER_IDS: "1,2,3,4,5"
+      METADATA_DIR: "/metadata"
+      DATA_DIR: "/data"
+      BROKERS: "1@broker-1:80,2@broker-2:80,3@broker-3:80,4@broker-4:80,5@broker-5:80"
+    ports:
+      - "8004:80"
+    volumes:
+      - ./metadata/broker-4:/metadata
+      - ./data/broker-4:/data
+
+  broker-5:
+    build: .
+    container_name: broker-5
+    environment:
+      BROKER_ID: "5"
+      LEADER_BROKER_ID: "1"
+      ALL_BROKER_IDS: "1,2,3,4,5"
+      METADATA_DIR: "/metadata"
+      DATA_DIR: "/data"
+      BROKERS: "1@broker-1:80,2@broker-2:80,3@broker-3:80,4@broker-4:80,5@broker-5:80"
+    ports:
+      - "8005:80"
+    volumes:
+      - ./metadata/broker-5:/metadata
+      - ./data/broker-5:/data
